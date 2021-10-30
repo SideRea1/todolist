@@ -1,31 +1,10 @@
-import axios from 'axios'
+const sendGetRequest = async () => {
+    let response = await fetch('http://localhost:8080/user');
 
-
-// export const sendGetRequest = async () => {
-//     try {
-//         const resp = await axios.get('http://localhost:3001/lol');
-//         console.log(resp.data);
-//     } catch (err) {
-//         // Handle Error Here
-//         console.error(err);
-//     }
-// };
-
-// sendGetRequest();
-
-
-
-export const getKek = async () => {
-const res = await axios.get('http://localhost:3001/lol')
-console.log(res);
-return res.data;
-app.get('/lol', function(req, res) {
-
-        const HTML_DIR = path.join('/work/front/html/')
-    app.use(express.static(HTML_DIR))
-        res.sendFile('/work/front/html/TO DO.html');
-    });
-
-}
-
-sendGetRequest();
+    if (response.ok) { // если HTTP-статус в диапазоне 200-299
+        // получаем тело ответа (см. про этот метод ниже)
+        let json = await response.json();
+    } else {
+        alert("Ошибка HTTP: " + response.status);
+    }
+};
