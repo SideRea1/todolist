@@ -17,7 +17,7 @@ const addNewTaskToList = () => {
            ${value}
            </span>
            <button onclick="deleteTaskFromList(this.parentNode.parentNode.id)">
-           <i class="fas fa-backspace">Delete</i>
+           <i class="fas fa-backspace"></i>
            </button>
          </div>
           </div>`;
