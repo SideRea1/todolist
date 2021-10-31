@@ -21,7 +21,7 @@ const removeTask = async () => {
 
 const addTask = async (value) => {
     fetch('http://localhost:8080/api/user', {
-  method: 'POST', body: value
+  method: 'POST', body: {task: value}
 })
 };
 
