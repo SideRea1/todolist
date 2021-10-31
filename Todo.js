@@ -51,7 +51,7 @@ const init = async () => {
            ${item.task}
            </span>
            <button onclick="deleteTaskFromList(${item.id})">
-           <i class="fas fa-backspace">Delete</i>
+           <i class="fas fa-backspace"></i>
            </button>
            </div>
            </div>
