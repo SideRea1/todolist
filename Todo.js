@@ -15,6 +15,7 @@ document.querySelector('#push').onclick = function () {
            </div>
            </div>
         `;
+        console.log(document.querySelector('#newtask input').value)
         addTask(document.querySelector('#newtask input').value)
     }
 
@@ -26,7 +27,8 @@ document.querySelector('#push').onclick = function () {
     }
 
     document.querySelector("#newtask input").value = "";
-    
+
 }
-
-
+ document.onload = async () => {
+     const tasks = await getTasks()
+ }
